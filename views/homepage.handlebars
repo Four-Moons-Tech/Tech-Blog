@@ -1,7 +1,6 @@
-{{#if logged_in}}
-<button class="btn" id="new-post">New Post</button>
-{{#else}}
-<a href = "/login" ><button class="btn" id="login2">login to continue</button></a>
-</div>
-{{/if}}
-<script src="/js/login.js"></script>
+<h2>Welcome to the Tech Blog </h2>
+{{#each posts as |post|}}
+<h1> {{post.user.username}}</h1>
+<p>{{post.text}}</p>
+<p>{{post.created_on}}</p>
+{{/each}}

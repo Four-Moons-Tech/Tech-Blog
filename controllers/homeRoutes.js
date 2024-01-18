@@ -4,17 +4,16 @@ const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 const sequelize = require('sequelize')
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
     try {
-      const userData = await User.findAll({
-        attributes: { exclude: ['password'] },
-        order: [['last_name', 'ASC']],
+      const postData = await Post.findAll({
+        include: [{model:User}]
       });
   
-      const users = userData.map((user) => user.get({ plain: true }));
+      const posts = postData.map((post) => post.get({ plain: true }));
   
       res.render('homepage', {
-        users,
+        posts,
    
         logged_in: req.session.logged_in,
       });

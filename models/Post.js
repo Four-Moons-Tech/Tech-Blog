@@ -24,6 +24,7 @@ Post.init(
         },
         created_on: {
             type: DataTypes.DATE,
+            defaultValue: DataTypes.NOW 
 
         }
 
