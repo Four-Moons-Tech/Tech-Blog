@@ -1,0 +1,42 @@
+header {
+    padding: 15px;
+    text-align: center;
+    background: #54494f;
+    color: #a4ba9a;
+    
+}
+body {
+    background-color: #a4ba9a
+}
+
+.btn {
+    background: #54494f;
+    color: #a4ba9a;
+    font-size: 24px;
+}
+nav {
+    display: flex;
+
+}
+
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    align-content:center;
+    align-items: center;
+    background-color: #a4ba9a;
+}
+.card h1 {
+    background-color: #54494f;
+    color: #a4ba9a;
+  }
+.card p{
+    background-color: #a4ba9a;
+    color: #54494f;
+}
+h1 {
+   background-color:#a4ba9a;
+   color: #54494f;
+   border-radius: 4px;
+   box-shadow:3px 3px 2px grey;
+}
