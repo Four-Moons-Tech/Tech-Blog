@@ -2,11 +2,10 @@
 <section class="container">
     <h5 class="user-name">Welcome, {{user.username}}</h5>
    
-    <button class="btn" id="new-post">New Post</button>
-
+    
     <section class="flex-row justify-center">
-        <h1>My posts</h1>
-        <div class='row'>
+        {{!-- <h1>My posts</h1> --}}
+        <div class='column'>
             {{#each user.post as |post|}}
             <div class="post-card  p-5 m-5">
                 <h3 class="title is-size-1 is-size-3-mobile">Created on {{post.created_on}} </h3>
@@ -15,10 +14,11 @@
             {{/each}}    
         </div>
     </section>
+    <a class="btn" href="/addpost">New Post</a>
 </section>
 {{else }}
 
-<a href="./login.handlebars">Login first</a>
+<a href="/login">Login first</a>
 
 {{/if}}
 <script src="/js/createPost.js"></script>

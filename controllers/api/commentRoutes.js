@@ -67,7 +67,10 @@ router.get('/', (req, res) => {
   });
   
   router.put('/:id', (req, res) => {
-    Comment.update(req.body,{
+    Comment.update({
+      text: req.body.text
+    }, 
+    {
       where: {
         id: req.params.id
       }
