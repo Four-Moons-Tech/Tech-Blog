@@ -14,6 +14,7 @@ const loginFormHandler = async (event) => {
       console.log(response)
   
       if (response.ok) {
+        //console.log(`Successful login as ${username}`)
         document.location.replace('/dashboard');
       } else {
         alert('Failed to log in');

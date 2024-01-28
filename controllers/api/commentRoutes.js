@@ -52,9 +52,8 @@ router.get('/', (req, res) => {
   
   router.post('/', (req, res) => {
     Comment.create({
-        text: req.body.text,
-        user_id: req.body.user_id,
-        post_id: req.body.post_id
+        ...req.body,
+        user_id: req.session.user_id
     })
       .then((newComment) => {
         res.json(newComment);

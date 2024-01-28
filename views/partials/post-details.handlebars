@@ -1,7 +1,8 @@
 <section class="card">
-  <a href="/post/{{id}}">
-    <header>{{post.title}}</header>
-    <p> {{post.text}} </p>
-    {{> comments-details}}
+  <a href="/posts/{{id}}">
+    <h1>Posted by {{user.username}} on {{formatDate created_on}}</h1>
+    <header>{{title}}</header>
+    <p> {{text}} </p>
+    {{!-- {{> comments-details}} --}}
   </a>
 </section>

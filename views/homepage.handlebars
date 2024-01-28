@@ -1,12 +1,12 @@
 <h2>Welcome to the Tech Blog </h2>
  <a class="btn" href="/addpost">New Post</a>
 {{#each posts as |post|}}
-    <div class=" card  p-5 m-5">
+    {{!-- <div class=" card  p-5 m-5">
         <h1>Posted by {{post.user.username}} on {{post.created_on}}</h1>
         <p>{{post.text}}</p>
-    </div>
-    {{!-- {{> post-details}} --}}
-    {{!-- {{#each comments as |comment|}}
+    </div> --}}
+    {{> post-details post}}
+     {{!-- {{#each comments as |comment|}}
     <div class=" card  p-5 m-5">
         <h1>Commented by {{comment.user.username}} on {{comment.created_on}}</h1>
         <p>{{comment.text}}</p>

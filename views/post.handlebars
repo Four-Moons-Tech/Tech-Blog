@@ -1,10 +1,24 @@
 <section class="container">
   <h3 class="post-name">{{post.title}}</h3>
   <p> {{post.text}} </p>
+  {{#if logged_in}}
+  <form class="create-comment">
+
+    <div>
+      <label for="commentID"></label>
+      <input class="form-input" id="commentID" type="text">
+    </div>
+    <input type="hidden" id="postId" name="postId" value="{{post.id}}">
+
+    <button class="btn btn-primary" id="save-comment">Save Comment</button>
+
+  </form>
+  {{/if}}
   <section class="flex-row justify-center">
-    {{#each post.comment as |comment|}}
-    {{> comment-details}}
+    {{#each post.comments as |comment|}}
+    {{> comments-details}}
     {{/each}}
   </section>
 </section>
 
+<script src="/js/createComment.js"></script>

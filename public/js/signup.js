@@ -12,8 +12,9 @@ const signupFormHandler = async (event) => {
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.ok) {
+        console.log(`success! username created: ${username}`)
         document.location.replace('/dashboard');
-        console.log('success!')
+        
       } else {
         console.log('error');
         alert(response.statusText);
