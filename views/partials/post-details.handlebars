@@ -1,8 +1,26 @@
-<section class="card">
+{{!-- <section class="card">
   <a href="/posts/{{id}}">
-    <h1>Posted by {{user.username}} on {{formatDate created_on}}</h1>
+    <div class="card-header">
+      <h1>Posted by {{user.username}} on {{formatDate created_on}}</h1>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{title}}</h5>
+      <p class="card-text">{{text}}</p>
+
+    </div>
     <header>{{title}}</header>
     <p> {{text}} </p>
     {{!-- {{> comments-details}} --}}
+  {{!-- </a>
+</section> --}} 
+<div class="card w-100 m-3" >
+   <a href="/posts/{{id}}">
+  <div class="card-header">
+    Posted by {{user.username}} on {{formatDate created_on}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{title}}</h5>
+    <p class="card-text">{{text}}</p>
+  </div>
   </a>
-</section>
+</div>
