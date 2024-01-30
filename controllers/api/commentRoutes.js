@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
       },
       include: {
         model: Post,
-        attributes: ['created_on','post_id', 'user_id', 'text'  ]
+        attributes: ['created_on','id', 'user_id', 'text'  ]
       }
     })
       .then((commentData) => {
@@ -36,7 +36,7 @@ router.get('/', (req, res) => {
       },
       include: {
         model: Post,
-        attributes: ['created_on','post_id', 'user_id', 'text'  ]
+        attributes: ['created_on','id', 'user_id', 'text'  ]
       }
   
     }).then((commentByID) => {
