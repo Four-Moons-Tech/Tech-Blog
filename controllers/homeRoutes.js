@@ -92,8 +92,6 @@ router.get('/posts/:id', async (req, res) => {
             'username'
           ]
         },
-
-
       ]
     })
     const post = postData.get({ plain: true });

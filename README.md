@@ -5,8 +5,8 @@
 * Tech-Blog is a website where IT professionals can write blogs about technology.  
 When users first opens the blog site, they are presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in. 
 When users click on login buttion, they are take to the login/signup page. When they choose to sign up, they are prompted to create a username and password. When they are logged in, they see navigation links for the homepage, the dashboard, and the option to log out. When they click on the homepage option in the navigation, they are taken to the homepage and presented with existing blog posts that include the post title and the date created. When they click on an existing blog post, they are presented with the post title, contents, post creator’s username, and date created for that post and have the option to leave a comment. When they enter a comment and click on the submit button while signed in, then comment is saved and the post is updated to display the comment, the comment creator’s username, and the date created. When they click on the dashboard option in the navigation, they are taken to the dashboard and presented with blog posts they created. When they click on the button to add a new blog post, they are prompted to enter both a title and contents for the blog post. 
-WHEN I click on one of my existing posts in the dashboard
-<!-- THEN I am able to delete or update my post and taken back to an updated dashboard -->
+Whenusers click on one of my existing posts in the dashboard
+THEN I am able to delete or update my post and taken back to an updated dashboard
 When they click on the logout option in the navigation they are signed out of the site. 
 <!-- When users are idle on the site for more than a set time, they are able to view posts and comments but I am prompted to log in again before I can add, update, or delete posts. -->
 
@@ -55,4 +55,3 @@ You can see my GitHub accounts here:
 >![Screenshot4](<images/Screenshot 4.png>)
 >![Screenshot5](<images/Screenshot 5.png>)
 >![Screenshot6](<images/Screenshot 6.png>)
->![Screenshot7](<images/Screenshot 7.png>)

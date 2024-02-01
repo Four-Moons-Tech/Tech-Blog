@@ -78,6 +78,7 @@ router.put('/:id', (req, res) => {
     res.status(500).json(err)
   })
 })
+
 router.delete('/:id', (req, res) => {
   console.log('deleting post')
   // delete a post by its `id` value

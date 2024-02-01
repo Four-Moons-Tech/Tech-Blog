@@ -1,3 +1,4 @@
+{{#if logged_in}}
 <form class="create-post">
     <div class="mb-3">
         <label for="titleID" class="form-label">Post Title</label>
@@ -11,6 +12,11 @@
 
     <button class="btn btn-primary" id="save-post">Save Post</button>
 </form>
+{{else }}
+
+<a href="/login">Login first</a>
+
+{{/if}}
 
 
 <script src="/js/createPost.js"></script>

@@ -8,7 +8,7 @@ const delButtonHandler = async (event) => {
       });
   
       if (response.ok) {
-        window.location.reload();
+        document.location.replace('/dashboard');
       } else {
         alert('Failed to delete post');
       }
