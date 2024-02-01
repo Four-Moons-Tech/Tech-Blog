@@ -13,6 +13,7 @@ body {
     background: #54494f;
     color: #a4ba9a;
     font-size: 24px;
+    margin: 20px;
 }
 nav {
     display: flex;
@@ -39,4 +40,8 @@ h1 {
    color: #54494f;
    border-radius: 4px;
    box-shadow:3px 3px 2px grey;
+}
+.justify-center{
+    display: block;
+    width: 75%;
 }

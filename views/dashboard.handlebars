@@ -1,11 +1,15 @@
 {{#if logged_in}}
 <section class="container">
     <h5 class="user-name">Welcome, {{user.username}}</h5>
-    
+
     {{#each user.posts as |post|}}
     {{> post-details post}}
-    <a href="/update-post/{{post.id}}"><button class="btn btn-primary update-post" data-id="{{post.id}}" >Update</button></a>
-    <button class="btn btn-primary delete-post" data-id="{{post.id}}">Delete</button>
+    <div class="button-group">
+        <a href="/update-post/{{post.id}}"><button class="btn btn-primary update-post"
+                data-id="{{post.id}}">Update</button></a>
+        <button class="btn btn-primary delete-post" data-id="{{post.id}}">Delete</button>
+    </div>
+
     {{/each}}
     <a class="btn" href="/addpost">New Post</a>
 </section>
