@@ -109,4 +109,35 @@ router.get('/posts/:id', async (req, res) => {
   }
 })
 
+router.get('/update-post/:id', async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: Comment,
+          include: [{model:User, 
+          attributes: ['username']}]
+        },
+        {
+          model: User,
+          attributes: [
+            'username'
+          ]
+        },
+
+
+      ]
+    })
+    const post = postData.get({ plain: true });
+    console.log(post)
+    res.render('updatepost',
+      {
+        post,
+        logged_in: req.session.logged_in,
+      });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+})
 module.exports = router;

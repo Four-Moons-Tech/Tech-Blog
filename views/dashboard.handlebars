@@ -4,6 +4,8 @@
     
     {{#each user.posts as |post|}}
     {{> post-details post}}
+    <a href="/update-post/{{post.id}}"><button class="btn btn-primary update-post" data-id="{{post.id}}" >Update</button></a>
+    <button class="btn btn-primary delete-post" data-id="{{post.id}}">Delete</button>
     {{/each}}
     <a class="btn" href="/addpost">New Post</a>
 </section>
@@ -13,3 +15,4 @@
 
 {{/if}}
 
+<script src="/js/deletePost.js"></script>

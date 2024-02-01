@@ -1,0 +1,16 @@
+<form class="update-post" data-id="{{post.id}}">
+    <div class="mb-3">
+        <label for="titleID" class="form-label">Post Title</label>
+        <input type="form-input" value="{{post.title}}"class="form-control" name="title" placeholder="title">
+    </div>
+    <div class="mb-3">
+        <label for="postID" class="form-label">Post Text</label>
+        <textarea class="form-control"  name="text" rows="3">{{post.text}}</textarea>
+    </div>
+
+
+    <button class="btn btn-primary" id="save-post">Save Post</button>
+</form>
+
+
+<script src="/js/updatePost.js"></script>

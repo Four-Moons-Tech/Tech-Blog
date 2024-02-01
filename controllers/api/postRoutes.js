@@ -66,7 +66,7 @@ router.put('/:id', (req, res) => {
   Post.update({
     title: req.body.title,
     text: req.body.text,
-  },
+  }, 
   {
     where: {
       id: req.params.id
@@ -79,6 +79,7 @@ router.put('/:id', (req, res) => {
   })
 })
 router.delete('/:id', (req, res) => {
+  console.log('deleting post')
   // delete a post by its `id` value
   Post.destroy({
     where: {

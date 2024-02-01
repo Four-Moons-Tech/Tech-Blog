@@ -10,7 +10,10 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
+app.use((req, res, next)=>{
+  console.log(`${req.method} heard at ${req.url}`)
+  next()
+})
 const sess = {
   secret: 'Super secret secret',
   cookie: {},
@@ -31,6 +34,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(routes);
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Server listening on: http://localhost:' + PORT));
 });
